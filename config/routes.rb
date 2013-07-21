@@ -1,4 +1,8 @@
 Battlearena::Application.routes.draw do
+  root 'characters#index' 
+
+  resources :characters
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
