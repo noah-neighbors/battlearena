@@ -1,4 +1,6 @@
 Battlearena::Application.routes.draw do
+  resources :battles
+
   root 'characters#index' 
 
   resources :characters
