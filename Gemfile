@@ -8,6 +8,8 @@ gem 'rails', '4.0.0'
 
 # use mysql2 as the database for Active Record
 gem 'mysql2'
+# use twitter bootstrap rails to make it sexy
+gem "twitter-bootstrap-rails"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
