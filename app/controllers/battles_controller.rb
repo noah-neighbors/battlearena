@@ -27,12 +27,10 @@ class BattlesController < ApplicationController
     @battle = Battle.new(battle_params)
 
     respond_to do |format|
-      if @battle.save
-        format.html { redirect_to @battle, notice: 'Battle was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @battle }
+      if @battle.fight
+        format.html { render action: 'new' }        
       else
         format.html { render action: 'new' }
-        format.json { render json: @battle.errors, status: :unprocessable_entity }
       end
     end
   end

@@ -1,5 +1,18 @@
 <%- model_class = Battle -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+  <h1><%= Character.first.name %> vs Computer</h1>
 </div>
-<%= render :partial => 'form' %>
+
+<%= form_for @battle, :html => { :class => 'form-horizontal' } do |f| %>
+
+<% if @battle.fight %>
+  <h2>Winner</h2>
+<% else %>
+	<h2>Loser</h2>
+<% end %>
+
+
+  <div class="form-actions">
+    <%= f.submit "Battle!", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
